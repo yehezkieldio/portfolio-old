@@ -26,9 +26,11 @@ export class Navbar extends React.Component<IProps, IState> {
 		return (
 			<nav className="navbar is-spaced">
 				<div className="navbar-brand">
-					<Link href="/">
-						<a className="navbar-item">Yehezkiel Dio</a>
-					</Link>
+					{/* <Link href="/">
+						<a className="navbar-item navbar-title">
+							Yehezkiel Dio
+						</a>
+					</Link> */}
 					<a
 						className={
 							this.state.isActive

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin breakpoint($point) {
 	@if $point == extra_small_devices {
 		@media only screen and (max-width: 600px) {
@@ -41,13 +43,13 @@
 	@if $line-height == normal {
 		line-height: normal;
 	} @else {
-		line-height: $line-height / $font-size;
+		line-height: math.div($line-height, $font-size);
 	}
 
 	@if $letter-spacing == normal {
 		letter-spacing: normal;
 	} @else {
-		letter-spacing: #{$letter-spacing / $font-size}em;
+		letter-spacing: #{math.div($letter-spacing, $font-size)}em;
 	}
 
 	@if $font-weight == normal {
