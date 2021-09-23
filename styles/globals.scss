@@ -1,0 +1,54 @@
+@import url("https://fonts.cdnfonts.com/css/airbnb-cereal-app?styles=36584,36586,36587,36583,36585,36582");
+@import url("https://fonts.cdnfonts.com/css/inter?styles=29139,29142,29132,29135,29137,29140,29128,29130,29126");
+
+$airbnb-font-family: "Airbnb Cereal App", sans-serif;
+$inter-font-family: "Inter", sans-serif;
+
+$blue-whale-color: #042a38;
+$electric-violet-color: #e81cee;
+$spring-wood-color: #f2f5eb;
+$link-water-color: #f6f8fd;
+
+*,
+*::before,
+*::after {
+	border-width: 0;
+	border-style: solid;
+
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	text-rendering: optimizeLegibility;
+
+	touch-action: manipulation;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	-ms-overflow-style: scrollbar;
+}
+
+html,
+body {
+	font-feature-settings: "kern";
+	font-family: $inter-font-family;
+}
+
+p {
+	font-family: $inter-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $airbnb-font-family;
+}
