@@ -1,7 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
-import AvatarImage from "../public/Avatar.jpg";
+import AvatarImage from "../../public/Avatar.jpg";
 
 interface IProps {}
 interface IState {}

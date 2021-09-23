@@ -139,7 +139,7 @@ body {
 			@include font-style(20, normal, normal, 400);
 		}
 	}
-	.about-aftertitle {
+	.text-aftertitle {
 		@include font-style(16, 23, normal, 400);
 		@include color-opacity($azureish-white, 0.7);
 
@@ -147,8 +147,11 @@ body {
 			@include font-style(16, 22, normal, 400);
 		}
 	}
+	.index-heading,
+	.index-about-me {
+		margin-bottom: 110px;
+	}
 	.index-heading {
-		margin-bottom: 120px;
 		.avatar-image {
 			object-fit: cover;
 		}
@@ -157,6 +160,65 @@ body {
 		.about-me-illust {
 			@include breakpoint(extra_small_devices) {
 				padding: 8px !important;
+			}
+		}
+	}
+	.index-projects {
+		.projects-heading {
+			@include breakpoint(extra_small_devices) {
+				margin-bottom: 42px;
+			}
+		}
+		.first {
+			@include breakpoint(extra_large_devices) {
+				margin-top: 32px !important;
+			}
+			@include breakpoint(extra_small_devices) {
+				margin-top: 0 !important;
+			}
+		}
+		.second {
+			@include breakpoint(extra_large_devices) {
+				margin-bottom: 32px !important;
+			}
+			@include breakpoint(extra_small_devices) {
+				margin-bottom: 0 !important;
+			}
+		}
+		.card {
+			background: darken($color: $blue-whale-color, $amount: 2);
+
+			margin: 6px;
+			padding: 2px;
+			border-radius: 12px;
+			box-shadow: 0 0 0 0;
+			transition: 0.8s;
+
+			.card-image {
+				.projects-image {
+					filter: brightness(60%);
+				}
+			}
+
+			.card-content {
+				margin: 2px;
+
+				.card-title {
+					@include font-style(24, normal, normal, 600);
+					color: $azureish-white;
+					font-family: $airbnb-font-family;
+				}
+				.card-subtitle {
+					@include color-opacity($azureish-white, 0.7);
+
+					font-size: 18px;
+					font-weight: 300;
+
+					font-family: $inter-font-family;
+				}
+			}
+			&:hover {
+				transform: translateY(-25px);
 			}
 		}
 	}
@@ -193,6 +255,8 @@ body {
 		&:active,
 		&:focus {
 			color: $spring-wood-color;
+			background: darken($color: $blue-whale-color, $amount: 10);
+			transition: 0.6s;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Navbar } from "./Navbar";
+import Navbar from "./Navbar";
 
 interface IProps {
 	children: React.ReactNode;

@@ -1,16 +1,24 @@
 import React from "react";
 
 import Link from "next/link";
+import { withTranslation, useTranslation } from "next-i18next";
+import type { TFunction } from "react-i18next";
+import { withRouter, NextRouter } from "next/router";
 
-interface IProps {}
+interface WithRouterProps {
+	router: NextRouter;
+}
+
+interface IProps extends WithRouterProps {
+	t: TFunction;
+}
 interface IState {
 	isActive: boolean;
 }
 
-export class Navbar extends React.Component<IProps, IState> {
+class Navbar extends React.Component<IProps, IState> {
 	constructor(props: IProps) {
 		super(props);
-
 		this.state = {
 			isActive: false,
 		};
@@ -26,11 +34,6 @@ export class Navbar extends React.Component<IProps, IState> {
 		return (
 			<nav className="navbar is-spaced">
 				<div className="navbar-brand">
-					{/* <Link href="/">
-						<a className="navbar-item navbar-title">
-							Yehezkiel Dio
-						</a>
-					</Link> */}
 					<a
 						className={
 							this.state.isActive
@@ -62,8 +65,21 @@ export class Navbar extends React.Component<IProps, IState> {
 						<Link href="/">
 							<a className="navbar-item">Projects</a>
 						</Link>
-						<Link href="/">
+						<Link href="https://blog.yehezkieldio.xyz">
 							<a className="navbar-item">Blog</a>
+						</Link>
+						<Link
+							href="/"
+							locale={
+								this.props.router.locale === "eng"
+									? "ind"
+									: "eng"
+							}
+						>
+							{/* <a className="navbar-item">Change Language</a> */}
+							<a className="navbar-item">
+								{this.props.t("change-language")}
+							</a>
 						</Link>
 					</div>
 				</div>
@@ -71,3 +87,6 @@ export class Navbar extends React.Component<IProps, IState> {
 		);
 	}
 }
+
+const translationsHoc = withTranslation("common")(Navbar);
+export default withRouter(translationsHoc);
