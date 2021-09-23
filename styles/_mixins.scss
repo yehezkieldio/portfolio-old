@@ -1,0 +1,67 @@
+@mixin breakpoint($point) {
+	@if $point == extra_small_devices {
+		@media only screen and (max-width: 600px) {
+			@content;
+		}
+	} @else if $point == small_devices {
+		@media only screen and (min-width: 600px) {
+			@content;
+		}
+	} @else if $point == medium_devices {
+		@media only screen and (max-width: 768px) {
+			@content;
+		}
+	} @else if $point == large_devices {
+		@media only screen and (min-width: 992px) {
+			@content;
+		}
+	} @else if $point == extra_large_devices {
+		@media only screen and (min-width: 1200px) {
+			@content;
+		}
+	} @else if $point == potrait_tablet {
+		@media only screen and (min-width: 361px) {
+			@content;
+		}
+	} @else if $point == landscape_tablet {
+		@media only screen and (min-width: 768px) {
+			@content;
+		}
+	}
+}
+
+@mixin font-style(
+	$font-size,
+	$line-height: normal,
+	$letter-spacing: normal,
+	$font-weight: normal
+) {
+	font-size: $font-size * 1px;
+
+	@if $line-height == normal {
+		line-height: normal;
+	} @else {
+		line-height: $line-height / $font-size;
+	}
+
+	@if $letter-spacing == normal {
+		letter-spacing: normal;
+	} @else {
+		letter-spacing: #{$letter-spacing / $font-size}em;
+	}
+
+	@if $font-weight == normal {
+		font-weight: 400;
+	} @else {
+		font-weight: $font-weight;
+	}
+}
+
+@mixin color-opacity($color, $opacity) {
+	color: rgba($color, $opacity);
+}
+
+@mixin background-opacity($color, $opacity) {
+	background: $color;
+	background: rgba($color, $opacity);
+}
