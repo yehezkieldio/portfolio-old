@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { Hero } from "../components/Hero";
+
 const Index: NextPage = () => {
 	return (
-		<div>
-			<p>Hello, world!</p>
-		</div>
+		<Hero>
+			<h1 className="title">Hello, world!</h1>
+		</Hero>
 	);
 };
 
