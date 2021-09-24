@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Hero } from "../components/Hero";

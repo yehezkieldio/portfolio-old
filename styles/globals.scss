@@ -10,9 +10,8 @@ $inter-font-family: "Inter", sans-serif;
 $blue-whale-color: #042a38;
 $electric-violet-color: #e81cee;
 $spring-wood-color: #f2f5eb;
-$link-water-color: #f6f8fd;
-$dark-gunmetal: #1a202c;
 $azureish-white: #d3e4eb;
+$dark-gunmetal: #1a202c;
 
 *,
 *::before,
@@ -106,6 +105,18 @@ body {
 		&:active,
 		&:focus {
 			color: $blue-whale-color;
+		}
+	}
+}
+
+.footer {
+	margin-top: 120px;
+	background: $dark-gunmetal;
+	p {
+		color: $azureish-white;
+
+		a {
+			@include color-opacity($azureish-white, 0.8);
 		}
 	}
 }
