@@ -1,9 +1,10 @@
 import React from "react";
 
 import Link from "next/link";
-import { withTranslation, useTranslation } from "next-i18next";
+import { withTranslation } from "next-i18next";
 import type { TFunction } from "react-i18next";
 import { withRouter, NextRouter } from "next/router";
+import { BLOG_LINK } from "../config/links";
 
 interface WithRouterProps {
 	router: NextRouter;
@@ -23,7 +24,7 @@ class Navbar extends React.Component<IProps, IState> {
 			isActive: false,
 		};
 	}
-	private handleNavigation = () => {
+	private _handleNavigation = () => {
 		this.setState((prevState) => {
 			return {
 				isActive: !prevState.isActive,
@@ -43,7 +44,7 @@ class Navbar extends React.Component<IProps, IState> {
 						aria-label="menu"
 						aria-expanded="false"
 						data-target="navbarMenu"
-						onClick={this.handleNavigation}
+						onClick={this._handleNavigation}
 					>
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
@@ -62,10 +63,10 @@ class Navbar extends React.Component<IProps, IState> {
 						<Link href="/">
 							<a className="navbar-item">Home</a>
 						</Link>
-						<Link href="/">
+						<Link href="/projects">
 							<a className="navbar-item">Projects</a>
 						</Link>
-						<Link href="https://blog.yehezkieldio.xyz">
+						<Link href={BLOG_LINK}>
 							<a className="navbar-item">Blog</a>
 						</Link>
 						<Link
@@ -76,7 +77,6 @@ class Navbar extends React.Component<IProps, IState> {
 									: "eng"
 							}
 						>
-							{/* <a className="navbar-item">Change Language</a> */}
 							<a className="navbar-item">
 								{this.props.t("change-language")}
 							</a>

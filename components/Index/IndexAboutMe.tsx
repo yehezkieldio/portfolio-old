@@ -1,12 +1,19 @@
 import React from "react";
 
 import Image from "next/image";
+import { withTranslation } from "next-i18next";
+import type { TFunction } from "react-i18next";
 import AboutMeIllust from "../../public/illust/about-me.svg";
 
-interface IProps {}
+interface IProps {
+	t: TFunction;
+}
 interface IState {}
 
-export class IndexAboutMe extends React.Component<IProps, IState> {
+class IndexAboutMe extends React.Component<IProps, IState> {
+	constructor(props: IProps) {
+		super(props);
+	}
 	render() {
 		return (
 			<div className="index-about-me">
@@ -21,21 +28,22 @@ export class IndexAboutMe extends React.Component<IProps, IState> {
 						</figure>
 					</div>
 					<div className="column is-half">
-						<p className="pretitle subtitle">Who am i?</p>
-						<h1 className="title">About Me.</h1>
+						<p className="pretitle subtitle">
+							{this.props.t("index-about-me-pretitle")}
+						</p>
+						<h1 className="title">
+							{this.props.t("index-about-me-title")}
+						</h1>
 						<div className="block">
 							<p className="text-aftertitle subtitle">
-								A Indonesian 15 years old student at SMK Negeri
-								2 Balikpapan majoring in software engineering
-								with a keen interest in web development. I go by
-								LichKing112 or Liz on the Internet!
+								{this.props.t(
+									"index-about-me-text-aftertitle-one"
+								)}
 							</p>
 							<p className="text-aftertitle subtitle">
-								A manga enthusiast! with over 12 thousand
-								chapters read. Currently managing a Discord
-								community server centered around Genshin Impact
-								while taking freelance works related to by
-								expertise.
+								{this.props.t(
+									"index-about-me-text-aftertitle-two"
+								)}
 							</p>
 						</div>
 					</div>
@@ -44,3 +52,5 @@ export class IndexAboutMe extends React.Component<IProps, IState> {
 		);
 	}
 }
+
+export default withTranslation("index")(IndexAboutMe);

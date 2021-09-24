@@ -1,14 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { withTranslation } from "next-i18next";
+import type { TFunction } from "react-i18next";
 import Image from "next/image";
 
 import id2storeImage from "../../public/projects/id2store.jpg";
 import dewataImage from "../../public/projects/DewataSolusiTeknologi.jpg";
+import { GITHUB_LINK } from "../../config/links";
 
-interface IProps {}
+interface IProps {
+	t: TFunction;
+}
 interface IState {}
 
-export class IndexProjects extends React.Component<IProps, IState> {
+class IndexProjects extends React.Component<IProps, IState> {
 	render() {
 		return (
 			<div className="index-projects">
@@ -23,25 +27,31 @@ export class IndexProjects extends React.Component<IProps, IState> {
 									"
 								>
 									<h2 className="pretitle subtitle">
-										Projects & commissions!
+										{this.props.t(
+											"index-projects-pretitle"
+										)}
 									</h2>
-									<h1 className="title">My works.</h1>
+									<h1 className="title">
+										{this.props.t("index-projects-title")}
+									</h1>
 									<p className="aftertitle subtitle">
-										Some of my notable works. Please refer
-										to my projects list for a more complete
-										list.
+										{this.props.t(
+											"index-projects-aftertitle"
+										)}
 									</p>
 									<a
-										href=""
+										href={GITHUB_LINK}
 										className="call-to-action call-to-action-regular"
 									>
 										GitHub
 									</a>
 									<a
-										href=""
+										href="/projects"
 										className="call-to-action call-to-action-regular"
 									>
-										Projects List
+										{this.props.t(
+											"index-projects-call-to-action"
+										)}
 									</a>
 								</div>
 							</div>
@@ -122,3 +132,5 @@ export class IndexProjects extends React.Component<IProps, IState> {
 		);
 	}
 }
+
+export default withTranslation("index")(IndexProjects);

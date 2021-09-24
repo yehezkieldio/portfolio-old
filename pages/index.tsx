@@ -3,9 +3,9 @@ import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Hero } from "../components/Hero";
-import { IndexHeading } from "../components/Index/IndexHeading";
-import { IndexAboutMe } from "../components/Index/IndexAboutMe";
-import { IndexProjects } from "../components/Index/IndexProjects";
+import IndexHeading from "../components/Index/IndexHeading";
+import IndexAboutMe from "../components/Index/IndexAboutMe";
+import IndexProjects from "../components/Index/IndexProjects";
 
 const Index: NextPage = () => {
 	return (
@@ -24,7 +24,7 @@ const Index: NextPage = () => {
 export const getStaticProps = async ({ locale }: { locale: string }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ["common"])),
+			...(await serverSideTranslations(locale, ["common", "index"])),
 		},
 	};
 };
