@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "bulma": "^0.9.3",
-    "devicon": "^2.14.0",
     "next": "11.1.2",
     "next-i18next": "^8.8.0",
     "react": "17.0.2",
