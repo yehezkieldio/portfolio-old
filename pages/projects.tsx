@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import { Hero } from "../components/Hero";
 
 import ProjectsCard from "../components/Projects/ProjectsCard";
-import { CommissionCard } from "../components/Projects/commission";
+import { CommissionCard } from "../components/Projects/CommissionCard";
 import { commission, projects } from "../config/projects";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
