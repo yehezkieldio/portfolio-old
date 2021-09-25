@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Hero } from "../components/Hero";
 import IndexHeading from "../components/Index/IndexHeading";
 import IndexAboutMe from "../components/Index/IndexAboutMe";
 import IndexProjects from "../components/Index/IndexProjects";
 import IndexTechnologies from "../components/Index/IndexTechnologies";
+
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Index: NextPage = () => {
 	return (
@@ -22,12 +23,12 @@ const Index: NextPage = () => {
 	);
 };
 
-export const getStaticProps = async ({ locale }: { locale: string }) => {
+export async function getStaticProps({ locale }: { locale: string }) {
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ["common", "index"])),
 		},
 	};
-};
+}
 
 export default Index;

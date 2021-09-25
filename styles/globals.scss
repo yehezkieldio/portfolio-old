@@ -247,6 +247,49 @@ body {
 		}
 	}
 }
+.projects-wrapper {
+	.pretitle {
+		@include font-style(30, normal, normal, 500);
+		@include color-opacity($electric-violet-color, 0.8);
+	}
+	.commissions {
+		margin-top: 100px;
+	}
+
+	.card {
+		background: darken($color: $dark-gunmetal, $amount: 5);
+
+		margin: 6px;
+		padding: 2px;
+		border-radius: 12px;
+		box-shadow: 0 0 0 0;
+		transition: 0.8s;
+
+		.card-image {
+			.projects-image {
+				filter: brightness(60%);
+			}
+		}
+
+		.card-content {
+			margin: 2px;
+
+			.card-title {
+				@include font-style(24, normal, normal, 600);
+				color: $azureish-white;
+				font-family: $airbnb-font-family;
+			}
+			.card-subtitle {
+				@include color-opacity($azureish-white, 0.7);
+
+				font-size: 18px;
+				font-weight: 300;
+
+				font-family: $inter-font-family;
+			}
+		}
+	}
+}
 
 .call-to-action {
 	display: inline-block;
