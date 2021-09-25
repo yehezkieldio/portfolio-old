@@ -34,7 +34,7 @@ const Projects: NextPage = () => {
 						</div>
 					</div>
 					<div className="commissions">
-						<h1 className="pretitle">Commission.</h1>
+						<h1 className="pretitle">Commissions.</h1>
 						<div className="columns is-multiline">
 							{initializeCommissions}
 						</div>

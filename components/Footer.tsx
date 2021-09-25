@@ -16,6 +16,10 @@ export default class Footer extends React.Component<IProps, IState> {
 					<div className="block">
 						<p>
 							Powered by{" "}
+							<Link href="https://vercel.com/">
+								<a className="is-underlined">Vercel</a>
+							</Link>{" "}
+							with{" "}
 							<Link href="https://nextjs.org">
 								<a className="is-underlined">Next.js</a>
 							</Link>
