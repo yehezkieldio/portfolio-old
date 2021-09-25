@@ -5,6 +5,7 @@ import { Hero } from "../components/Hero";
 import IndexHeading from "../components/Index/IndexHeading";
 import IndexAboutMe from "../components/Index/IndexAboutMe";
 import IndexProjects from "../components/Index/IndexProjects";
+import IndexTechnologies from "../components/Index/IndexTechnologies";
 
 const Index: NextPage = () => {
 	return (
@@ -14,6 +15,7 @@ const Index: NextPage = () => {
 					<IndexHeading />
 					<IndexAboutMe />
 					<IndexProjects />
+					<IndexTechnologies />
 				</div>
 			</div>
 		</Hero>

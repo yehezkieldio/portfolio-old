@@ -159,7 +159,8 @@ body {
 		}
 	}
 	.index-heading,
-	.index-about-me {
+	.index-about-me,
+	.index-projects {
 		margin-bottom: 110px;
 	}
 	.index-heading {
@@ -168,6 +169,13 @@ body {
 		}
 	}
 	.index-about-me {
+		.is-half {
+			margin-left: 32px;
+
+			@include breakpoint(extra_small_devices) {
+				margin-left: 0;
+			}
+		}
 		.about-me-illust {
 			@include breakpoint(extra_small_devices) {
 				padding: 8px !important;
@@ -231,6 +239,11 @@ body {
 			&:hover {
 				transform: translateY(-25px);
 			}
+		}
+	}
+	.index-technologies {
+		.index-swiper {
+			margin-top: 120px;
 		}
 	}
 }

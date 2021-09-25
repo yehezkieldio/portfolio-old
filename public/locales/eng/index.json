@@ -11,5 +11,9 @@
 	"index-projects-pretitle": "Projects & commissions!",
 	"index-projects-title": "My works.",
 	"index-projects-aftertitle": "Some of my notable works. Please refer to my projects list for a more complete list.",
-	"index-projects-call-to-action": "Project List"
+	"index-projects-call-to-action": "Project List",
+
+	"index-technologies-pretitle": "Technologies & languages!",
+	"index-technologies-title": "My skills.",
+	"index-technologies-aftertitle": "My technology stack and stuff i know of!"
 }
