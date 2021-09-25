@@ -2,6 +2,7 @@ import React from "react";
 import { withTranslation } from "next-i18next";
 import type { TFunction } from "react-i18next";
 import Image from "next/image";
+import Link from "next/link";
 
 import id2storeImage from "../../public/projects/id2store.jpg";
 import dewataImage from "../../public/projects/DewataSolusiTeknologi.jpg";
@@ -45,14 +46,13 @@ class IndexProjects extends React.Component<IProps, IState> {
 									>
 										GitHub
 									</a>
-									<a
-										href="/projects"
-										className="call-to-action call-to-action-regular"
-									>
-										{this.props.t(
-											"index-projects-call-to-action"
-										)}
-									</a>
+									<Link href="/projects">
+										<a className="call-to-action call-to-action-regular">
+											{this.props.t(
+												"index-projects-call-to-action"
+											)}
+										</a>
+									</Link>
 								</div>
 							</div>
 							<div
