@@ -44,10 +44,6 @@ body {
 	font-family: $inter-font-family;
 }
 
-p {
-	font-family: $inter-font-family;
-}
-
 h1,
 h2,
 h3,
@@ -57,6 +53,10 @@ h6 {
 	font-family: $airbnb-font-family;
 }
 
+p {
+	font-family: $inter-font-family;
+}
+
 html,
 body {
 	background: $dark-gunmetal;
@@ -64,11 +64,6 @@ body {
 
 .navbar {
 	font-family: $airbnb-font-family;
-
-	.is-active {
-		background: $dark-gunmetal;
-	}
-
 	.navbar-item {
 		@include font-style(18, normal, normal, normal);
 
@@ -106,6 +101,10 @@ body {
 		&:focus {
 			color: $blue-whale-color;
 		}
+	}
+
+    .is-active {
+		background: $dark-gunmetal;
 	}
 }
 
