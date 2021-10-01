@@ -18,6 +18,11 @@ export const projects: IGitHubProjectsProps[] = [
 		link: "https://github.com/LichKing112/ProjectileHP",
 		slug: "LichKing112/ProjectileHP",
 	},
+	{
+		name: "Mythcord",
+		link: "https://github.com/mythcordbot/mythcord",
+		slug: "mythcordbot/mythcord",
+	},
 ];
 
 export interface ICommissionProps {
