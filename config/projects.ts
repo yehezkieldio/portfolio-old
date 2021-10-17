@@ -19,9 +19,9 @@ export const projects: IGitHubProjectsProps[] = [
 		slug: "LichKing112/ProjectileHP",
 	},
 	{
-		name: "Mythcord",
-		link: "https://github.com/mythcordbot/mythcord",
-		slug: "mythcordbot/mythcord",
+		name: "Raiden",
+		link: "https://github.com/LichKing112/raiden",
+		slug: "LichKing112/raiden",
 	},
 ];
 
