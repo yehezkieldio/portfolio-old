@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Checking current changes..";
+
+npm run lint || (
+    echo "ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.";
+    false;
+)
+
+echo "Everything is good!"

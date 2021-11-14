@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORTS                                  */
+/* -------------------------------------------------------------------------- */
+
+@import "./variables";
+@import "./mixins";
+@import "./overrides";
+
+/* -------------------------------------------------------------------------- */
+/*                                  DEFAULTS                                  */
+/* -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    border-width: 0;
+    border-style: solid;
+
+    box-sizing: border-box;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: $inter;
+    font-feature-settings: "kern";
+    background: $gunmetal;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   NAVBAR                                   */
+/* -------------------------------------------------------------------------- */
+
+.navbar {
+    padding: 1.125rem;
+
+    .navbar-item {
+        font-weight: 450;
+        transition: 0.5s;
+    }
+
+    .navbar-burger {
+        &:hover {
+            color: $azureish-white;
+        }
+    }
+
+    .is-icon {
+        svg {
+            color: $gray;
+
+            &:hover {
+                color: $azureish-white;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   OTHERS                                   */
+/* -------------------------------------------------------------------------- */
+
+.container {
+    padding: 1.125rem;
+    outline: 0.063rem solid $azureish-white;
+    max-width: 55rem;
+
+    a {
+        color: $azureish-white;
+        transition: 0.2s;
+
+        &:hover {
+            color: $azureish-white;
+            border-bottom: 0.063rem solid $azureish-white;
+        }
+    }
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.highlight {
+    color: $azureish-white;
+    text-decoration: underline;
+}

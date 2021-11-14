@@ -4,11 +4,9 @@
 
 ## ー Information
 
--   Internationalization and localization (i18n) support. You can find the locales [here](https://github.com/LichKing112/portfolio/tree/master/public/locales).
--   Website design is heavily inspired by my past website design's iterations.
+-   A simplistic personal website/portfolio design with [Bulma](https://bulma.io).
+-   Will switch to pure markdown when the general design is finished.
 
-## ー Screenshots
+## ー License
 
-| Full page                                                                                            |
-| ---------------------------------------------------------------------------------------------------- |
-| ![Index](https://media.discordapp.net/attachments/781005483314118656/891319001899208774/unknown.png) |
+-   This project is licensed under the [MIT](https://github.com/LichKing112/portfolio/blob/master/LICENSE) license.

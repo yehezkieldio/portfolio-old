@@ -1,0 +1,26 @@
+@import "./variables";
+
+$navbar-background-color: transparent;
+
+$navbar-burger-color: $azureish-white;
+
+$navbar-item-color: $gray;
+$navbar-item-hover-color: $azureish-white;
+$navbar-item-active-color: $azureish-white;
+
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-background-color: transparent;
+
+$title-color: $azureish-white;
+$subtitle-color: $gray;
+
+$title-weight: 800;
+$subtitle-weight: 410;
+
+$title-line-height: 2.5rem;
+$subtitle-line-height: 1.75rem;
+
+$subtitle-size: 1rem;
+$subtitle-negative-margin: 2.15rem;
+
+@import "~bulma/bulma.sass";
