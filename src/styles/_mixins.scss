@@ -58,3 +58,9 @@
         font-weight: $font-weight;
     }
 }
+
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        --#{$key}: #{$value};
+    }
+}

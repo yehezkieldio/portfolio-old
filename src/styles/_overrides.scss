@@ -1,18 +1,20 @@
 @import "./variables";
+@import "./mixins";
+@import "./themes";
 
 $navbar-background-color: transparent;
 
-$navbar-burger-color: $azureish-white;
+$navbar-burger-color: var(--primary-foreground);
 
-$navbar-item-color: $gray;
-$navbar-item-hover-color: $azureish-white;
-$navbar-item-active-color: $azureish-white;
+$navbar-item-color: var(--secondary-foreground);
+$navbar-item-hover-color: var(--primary-foreground);
+$navbar-item-active-color: var(--primary-foreground);
 
 $navbar-item-hover-background-color: transparent;
 $navbar-item-active-background-color: transparent;
 
-$title-color: $azureish-white;
-$subtitle-color: $gray;
+$title-color: var(--primary-foreground);
+$subtitle-color: var(--secondary-foreground);
 
 $title-weight: 800;
 $subtitle-weight: 410;

@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./mixins";
+
+:root {
+    @include spread-map($theme-map-personal);
+}
+
+[data-theme="tokyo-night-storm"] {
+    @include spread-map($theme-map-tokyo-night-storm);
+}
+
+[data-theme="gruvbox"] {
+    @include spread-map($theme-map-gruvbox);
+}

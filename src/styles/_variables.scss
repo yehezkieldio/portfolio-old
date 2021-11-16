@@ -1,6 +1,37 @@
-$inter: "Inter", sans-serif;
+@use "sass:map";
 
-$white: #ffffff;
-$azureish-white: #d3e4eb;
-$gray: #bbbbbb;
-$gunmetal: #1a202c;
+@import "./mixins";
+
+$inter: "Inter", sans-serif;
+$dmsans: "DM Sans", sans-serif;
+$jetbrains-mono: "JetBrains Mono", sans-serif;
+
+/* -------------------------------------------------------------------------- */
+/*                                  PERSONAL                                  */
+/* -------------------------------------------------------------------------- */
+
+$theme-map-personal: (
+    "primary-background": #1a202c,
+    "primary-foreground": #d3e4eb,
+    "secondary-foreground": #bbbbbb,
+);
+
+/* -------------------------------------------------------------------------- */
+/*                              TOKYO NIGHT STORM                             */
+/* -------------------------------------------------------------------------- */
+
+$theme-map-tokyo-night-storm: (
+    "primary-background": #24283b,
+    "primary-foreground": #b4f9f8,
+    "secondary-foreground": #73daca,
+);
+
+/* -------------------------------------------------------------------------- */
+/*                                   GRUVBOX                                  */
+/* -------------------------------------------------------------------------- */
+
+$theme-map-gruvbox: (
+    "primary-background": #1d2021,
+    "primary-foreground": #fbf1c7,
+    "secondary-foreground": #a89984,
+);

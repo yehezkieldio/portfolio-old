@@ -7,6 +7,7 @@
 @import "./variables";
 @import "./mixins";
 @import "./overrides";
+@import "./themes";
 
 /* -------------------------------------------------------------------------- */
 /*                                  DEFAULTS                                  */
@@ -33,9 +34,9 @@ body {
 
 html,
 body {
-    font-family: $inter;
+    font-family: $dmsans;
     font-feature-settings: "kern";
-    background: $gunmetal;
+    background: var(--primary-background);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -52,16 +53,16 @@ body {
 
     .navbar-burger {
         &:hover {
-            color: $azureish-white;
+            color: var(--primary-foreground);
         }
     }
 
     .is-icon {
         svg {
-            color: $gray;
+            color: var(--secondary-foreground);
 
             &:hover {
-                color: $azureish-white;
+                color: var(--primary-foreground);
             }
         }
     }
@@ -73,17 +74,22 @@ body {
 
 .container {
     padding: 1.125rem;
-    outline: 0.063rem solid $azureish-white;
-    max-width: 55rem;
+    max-width: 45rem;
 
     a {
-        color: $azureish-white;
+        color: var(--primary-foreground);
         transition: 0.2s;
 
         &:hover {
-            color: $azureish-white;
-            border-bottom: 0.063rem solid $azureish-white;
+            color: var(--primary-foreground);
+            border-bottom: 0.063rem solid var(--primary-foreground);
         }
+    }
+}
+
+.markdown-body {
+    strong {
+        color: var(--primary-foreground);
     }
 }
 
@@ -92,6 +98,6 @@ body {
 }
 
 .highlight {
-    color: $azureish-white;
+    color: var(--primary-foreground);
     text-decoration: underline;
 }
