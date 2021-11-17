@@ -28,7 +28,7 @@ export async function getStaticProps() {
     const contents = path.join(process.cwd(), "contents");
 
     const content = fs
-        .readFileSync(`${contents}/Bookmarks/Bookmarks.md`)
+        .readFileSync(`${contents}/bookmarks/Bookmarks.md`)
         .toString();
     const data = matter(content).content;
 
