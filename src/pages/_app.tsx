@@ -1,10 +1,18 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-// import "bulma/css/bulma.min.css";
 import "../styles/index.scss";
 
 export const _app = ({ Component, pageProps }: AppProps) => {
+    if (process.browser) {
+        const currentTheme = localStorage.getItem("theme")
+            ? localStorage.getItem("theme")
+            : null;
+
+        if (currentTheme) {
+            document.documentElement.setAttribute("data-theme", currentTheme);
+        }
+    }
     return (
         <>
             <Head>

@@ -12,3 +12,7 @@
 [data-theme="gruvbox"] {
     @include spread-map($theme-map-gruvbox);
 }
+
+[data-theme="levamentum"] {
+    @include spread-map($theme-map-levamentum);
+}

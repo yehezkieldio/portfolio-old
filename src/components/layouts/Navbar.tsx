@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { Component } from "react";
+import { Component, createRef } from "react";
 
 import { Album, Github, Instagram } from "lucide-react";
-import { GITHUB_LINK, INSTAGRAM_LINK } from "../../config/links";
 
 interface IProps {}
 
@@ -25,6 +24,42 @@ export class Navbar extends Component<IProps, IStates> {
                 isActive: !prevState.isActive,
             };
         });
+    };
+
+    private _handleTheme = (theme: string) => {
+        if (process.browser) {
+            switch (theme) {
+                case "personal":
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        "personal"
+                    );
+                    localStorage.setItem("theme", "personal");
+                    break;
+                case "tokyo-night-storm":
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        "tokyo-night-storm"
+                    );
+                    localStorage.setItem("theme", "tokyo-night-storm");
+
+                    break;
+                case "gruvbox":
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        "gruvbox"
+                    );
+                    localStorage.setItem("theme", "gruvbox");
+                    break;
+                case "levamentum":
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        "levamentum"
+                    );
+                    localStorage.setItem("theme", "levamentum");
+                    break;
+            }
+        }
     };
 
     render() {
@@ -65,6 +100,43 @@ export class Navbar extends Component<IProps, IStates> {
                         <Link href="/schoolwork">
                             <a className="navbar-item">Schoolwork</a>
                         </Link>
+                        <div className="navbar-item has-dropdown is-hoverable">
+                            <a className="navbar-link">Theme</a>
+
+                            <div className="navbar-dropdown">
+                                <a
+                                    className="navbar-item"
+                                    onClick={() =>
+                                        this._handleTheme("personal")
+                                    }
+                                >
+                                    Personalized
+                                </a>
+                                <a
+                                    className="navbar-item"
+                                    onClick={() =>
+                                        this._handleTheme("tokyo-night-storm")
+                                    }
+                                >
+                                    Tokyo Night Storm
+                                </a>
+                                <a
+                                    className="navbar-item"
+                                    onClick={() =>
+                                        this._handleTheme("levamentum")
+                                    }
+                                >
+                                    Levamentum
+                                </a>
+                                <a
+                                    className="navbar-item"
+                                    onClick={() => this._handleTheme("gruvbox")}
+                                >
+                                    Gruvbox
+                                </a>
+                            </div>
+                        </div>
+
                         <Link href="/bookmarks">
                             <a className="navbar-item is-icon">
                                 <span className="is-hidden-desktop">
@@ -75,7 +147,7 @@ export class Navbar extends Component<IProps, IStates> {
                                 </span>
                             </a>
                         </Link>
-                        <Link href={GITHUB_LINK}>
+                        <Link href="https://github.com/LichKing112">
                             <a className="navbar-item is-icon">
                                 <span className="is-hidden-desktop">
                                     GitHub
@@ -85,7 +157,7 @@ export class Navbar extends Component<IProps, IStates> {
                                 </span>
                             </a>
                         </Link>
-                        <Link href={INSTAGRAM_LINK}>
+                        <Link href="https://www.instagram.com/yhezkiel.dio/">
                             <a className="navbar-item is-icon">
                                 <span className="is-hidden-desktop">
                                     Instagram

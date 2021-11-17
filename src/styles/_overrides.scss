@@ -13,6 +13,17 @@ $navbar-item-active-color: var(--primary-foreground);
 $navbar-item-hover-background-color: transparent;
 $navbar-item-active-background-color: transparent;
 
+$navbar-dropdown-background-color: transparent;
+
+$navbar-dropdown-arrow: var(--secondary-foreground);
+$navbar-dropdown-border-top: 0 solid transparent;
+
+$navbar-dropdown-item-hover-color: var(--primary-foreground);
+$navbar-dropdown-item-active-color: var(--primary-foreground);
+
+$navbar-dropdown-item-hover-background-color: transparent;
+$navbar-dropdown-item-active-background-color: transparent;
+
 $title-color: var(--primary-foreground);
 $subtitle-color: var(--secondary-foreground);
 

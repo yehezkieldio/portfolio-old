@@ -72,6 +72,23 @@ body {
 /*                                   OTHERS                                   */
 /* -------------------------------------------------------------------------- */
 
+.list {
+    & > .title {
+        margin-top: 0.5rem;
+    }
+
+    .list-item {
+        margin-top: 1.125rem;
+        margin-bottom: 1.125rem;
+    }
+
+    .is-icon {
+        svg {
+            color: var(--primary-foreground);
+        }
+    }
+}
+
 .container {
     padding: 1.125rem;
     max-width: 45rem;
