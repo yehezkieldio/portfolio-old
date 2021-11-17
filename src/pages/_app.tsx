@@ -22,6 +22,7 @@ export const _app = ({ Component, pageProps }: AppProps) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
+                <meta name="theme-color" content="#d3e4eb" />
 
                 <title>Yehezkiel Dio — a web developer</title>
                 <link rel="shortcut icon" href="/favicon.ico" />

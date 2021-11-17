@@ -5,7 +5,24 @@
 ## ー Information
 
 -   A simplistic personal website/portfolio design with [Bulma](https://bulma.io).
--   Will switch to pure markdown when the general design is finished.
+
+## ー Themes
+
+### Personal
+
+![Personal!](/public/screenshots/personalized.png)
+
+### Tokyo Night Storm
+
+![Personal!](/public/screenshots/tokyo-night-storm.png)
+
+### Levamentum
+
+![Personal!](/public/screenshots/levamentum.png)
+
+### Gruvbox
+
+![Personal!](/public/screenshots/gruvbox.png)
 
 ## ー License
 
