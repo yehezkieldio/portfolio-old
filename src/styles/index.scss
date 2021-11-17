@@ -49,6 +49,13 @@ body {
     .navbar-item {
         font-weight: 450;
         transition: 0.5s;
+
+        .navbar-link::after {
+            border-color: var(--secondary-foreground);
+        }
+        .navbar-link:hover::after {
+            border-color: var(--primary-foreground);
+        }
     }
 
     .navbar-burger {
@@ -106,6 +113,19 @@ body {
 
 .markdown-body {
     strong {
+        color: var(--primary-foreground);
+    }
+}
+
+.content {
+    .title {
+        color: var(--primary-foreground);
+    }
+
+    li {
+        margin-top: 18px;
+        margin-bottom: 18px;
+
         color: var(--primary-foreground);
     }
 }

@@ -19,7 +19,6 @@ interface IProps {
 }
 
 export const Projects: NextPage<IProps> = ({ projects, commissions }) => {
-    console.log(projects);
     return (
         <Default>
             <Section>

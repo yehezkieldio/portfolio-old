@@ -14,8 +14,11 @@ export const Markdown: FunctionComponent<IProps> = ({ content }) => {
                     h1: ({ children }) => {
                         return <h1 className="title">{children}</h1>;
                     },
+                    h2: ({ children }) => {
+                        return <h2 className="title is-4">{children}</h2>;
+                    },
 
-		    /* eslint-disable */
+                    /* eslint-disable */
                     p: ({ children }) => {
                         return <p className="subtitle">{children}</p>;
                     },
