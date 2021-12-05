@@ -32,7 +32,6 @@
 
 -   [Supreme Magus](https://www.webnovel.com/book/supreme-magus_12820870105509205)
 -   [Book Eating Magician](https://www.novelupdates.com/series/the-book-eating-magician/)
--   [The Beginning After The End](https://m.tapas.io/series/tbate-comic)
 -   [Throne of Magical Arcana](https://www.novelupdates.com/series/throne-of-magical-arcana/)
 -   [I Was Bored So I Made A Secret Organization](https://www.scribblehub.com/series/328484/i-was-bored-so-i-made-a-secret-organization/)
 -   [Lord of the Mysteries](https://www.novelupdates.com/series/lord-of-the-mysteries/)
