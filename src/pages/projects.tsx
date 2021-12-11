@@ -23,7 +23,6 @@ export const Projects: NextPage<IProps> = ({ projects, commissions }) => {
         <Default>
             <Section>
                 <List display="Projects" projects={projects} />
-                <List display="Commissions" projects={commissions} />
             </Section>
         </Default>
     );
