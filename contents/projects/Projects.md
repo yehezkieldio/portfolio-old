@@ -9,11 +9,10 @@ projects:
       link: "https://github.com/LichKing112/raiden"
       desc: "Raiden is a operations management Discord bot for Genshin Impact ID."
       icon: "bot"
-commissions:
-    - name: "id2store"
-      link: "https://id2store.com/"
-      desc: "Topup Game Favoritmu Dengan Mudah Melalui ID2Store."
-      icon: "web"
+    - name: "imperia"
+      link: "https://github.com/LichKing112/imperia"
+      desc: "All-purpose Discord bot.."
+      icon: "bot"
 ---
 
-# test
+# projects
