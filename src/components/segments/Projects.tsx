@@ -18,6 +18,9 @@ export const Projects = () => {
                                             <div className="column is-6">
                                                 <ProjectCard username="LichKing112" repository="portfolio" />
                                             </div>
+                                            <div className="column is-6">
+                                                <ProjectCard username="LichKing112" repository="raiden" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
