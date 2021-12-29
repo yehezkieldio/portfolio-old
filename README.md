@@ -1,29 +1,16 @@
-# portfolio
+<div align="center">
+    <!-- LOGO -->
+    <h1>portfolio</h1>
+    <img src="https://wakatime.com/badge/github/LichKing112/portfolio.svg?style=for-the-badge" alt="banner" align="center" />
+    <br/>
+    <span>My personal website.</span>
+</div>
 
-> Personal website/portfolio.
+### ー Information
 
-## ー Information
-
--   A simplistic personal website/portfolio design with [Bulma](https://bulma.io).
-
-## ー Themes
-
-### Personal
-
-![Personal!](/public/screenshots/personalized.png)
-
-### Tokyo Night Storm
-
-![Personal!](/public/screenshots/tokyo-night-storm.png)
-
-### Levamentum
-
-![Personal!](/public/screenshots/levamentum.png)
-
-### Gruvbox
-
-![Personal!](/public/screenshots/gruvbox.png)
+-   A simplistic personal website/portfolio design built with [Bulma](https://bulma.io).
+-   Kept redesigning this shit for too much that I lost track what design this is.
 
 ## ー License
 
--   This project is licensed under the [MIT](https://github.com/LichKing112/portfolio/blob/master/LICENSE) license.
+-   This project is licensed under the [MIT](LICENSE) license.

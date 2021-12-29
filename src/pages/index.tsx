@@ -1,38 +1,20 @@
 import type { NextPage } from "next";
 
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { Header } from "../components/segments/Header";
+import { AboutMe } from "../components/segments/AboutMe";
+import { TechnologyStack } from "../components/segments/TechnologyStack";
+import { Projects } from "../components/segments/Projects";
+import { Default } from "../components/Default";
 
-import Default from "../components/layouts/Default";
-import Section from "../components/Section";
-import Markdown from "../components/Markdown";
-
-interface IProps {
-    indexMarkdown: string;
-}
-
-export const Index: NextPage<IProps> = ({ indexMarkdown }) => {
+export const Index: NextPage = () => {
     return (
         <Default>
-            <Section>
-                <Markdown content={indexMarkdown} />
-            </Section>
+            <Header />
+            <AboutMe />
+            <TechnologyStack />
+            <Projects />
         </Default>
     );
 };
-
-export async function getStaticProps() {
-    const contents = path.join(process.cwd(), "contents");
-
-    const content = fs.readFileSync(`${contents}/index/Index.md`).toString();
-    const data = matter(content).content;
-
-    return {
-        props: {
-            indexMarkdown: data,
-        },
-    };
-}
 
 export default Index;

@@ -2,46 +2,14 @@
 
 @import "./mixins";
 
-$inter: "Inter", sans-serif;
+$playfairdisplay: "Playfair Display", serif;
 $dmsans: "DM Sans", sans-serif;
 $jetbrains-mono: "JetBrains Mono", sans-serif;
 
-/* -------------------------------------------------------------------------- */
-/*                                  PERSONAL                                  */
-/* -------------------------------------------------------------------------- */
-
 $theme-map-personal: (
     "primary-background": #1a202c,
+    "secondary-background": #171d28,
     "primary-foreground": #d3e4eb,
     "secondary-foreground": #bbbbbb,
-);
-
-/* -------------------------------------------------------------------------- */
-/*                              TOKYO NIGHT STORM                             */
-/* -------------------------------------------------------------------------- */
-
-$theme-map-tokyo-night-storm: (
-    "primary-background": #24283b,
-    "primary-foreground": #b4f9f8,
-    "secondary-foreground": #73daca,
-);
-
-/* -------------------------------------------------------------------------- */
-/*                                   GRUVBOX                                  */
-/* -------------------------------------------------------------------------- */
-
-$theme-map-gruvbox: (
-    "primary-background": #1d2021,
-    "primary-foreground": #fbf1c7,
-    "secondary-foreground": #a89984,
-);
-
-/* -------------------------------------------------------------------------- */
-/*                                 LEVAMENTUM                                 */
-/* -------------------------------------------------------------------------- */
-
-$theme-map-levamentum: (
-    "primary-background": #13141d,
-    "primary-foreground": #cfd1dd,
-    "secondary-foreground": #a9acc2,
+    "tertiary-foreground": #ff5c98,
 );

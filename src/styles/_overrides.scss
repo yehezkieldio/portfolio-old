@@ -27,13 +27,4 @@ $navbar-dropdown-item-active-background-color: transparent;
 $title-color: var(--primary-foreground);
 $subtitle-color: var(--secondary-foreground);
 
-$title-weight: 800;
-$subtitle-weight: 410;
-
-$title-line-height: 2.5rem;
-$subtitle-line-height: 1.75rem;
-
-$subtitle-size: 1rem;
-$subtitle-negative-margin: 2.15rem;
-
 @import "~bulma/bulma.sass";

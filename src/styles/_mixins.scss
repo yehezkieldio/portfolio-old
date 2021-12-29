@@ -32,13 +32,23 @@
     }
 }
 
-@mixin font-style(
-    $font-size,
-    $line-height: normal,
-    $letter-spacing: normal,
-    $font-weight: normal
-) {
-    font-size: $font-size * 1px;
+@function calculateRem($size) {
+    $remSize: math.div($size, 16px);
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin letter-spacing($spacing) {
+    letter-spacing: calculateRem($spacing);
+    margin-right: -#{calculateRem($spacing)};
+}
+
+@mixin font-style($font-size, $line-height: normal, $letter-spacing: normal, $font-weight: normal) {
+    @include font-size($font-size);
 
     @if $line-height == normal {
         line-height: normal;
@@ -49,7 +59,7 @@
     @if $letter-spacing == normal {
         letter-spacing: normal;
     } @else {
-        letter-spacing: #{math.div($letter-spacing, $font-size)}em;
+        @include letter-spacing($letter-spacing);
     }
 
     @if $font-weight == normal {
@@ -59,7 +69,7 @@
     }
 }
 
-@mixin spread-map($map: ()) {
+@mixin map-to-css-variables($map: ()) {
     @each $key, $value in $map {
         --#{$key}: #{$value};
     }
