@@ -1,7 +1,6 @@
 <div align="center">
     <!-- LOGO -->
     <h1>portfolio</h1>
-    <img src="https://wakatime.com/badge/github/LichKing112/portfolio.svg?style=for-the-badge" alt="banner" align="center" />
     <br/>
     <span>My personal website.</span>
 </div>
