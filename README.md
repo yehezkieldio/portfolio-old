@@ -1,5 +1,4 @@
 <div align="center">
-    <!-- LOGO -->
     <h1>portfolio</h1>
     <br/>
     <span>My personal website.</span>
