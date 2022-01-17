@@ -1,14 +1,9 @@
-<div align="center">
-    <h1>portfolio</h1>
-    <br/>
-    <span>My personal website.</span>
-</div>
+───────────── ˎˊ˗
 
-### ー Information
+### ❖ Overview
 
--   A simplistic personal website/portfolio design built with [Bulma](https://bulma.io).
--   Kept redesigning this shit for too much that I lost track what design this is.
+- My personal website/portfolio.
 
-## ー License
+### ❖ License
 
 -   This project is licensed under the [MIT](LICENSE) license.
