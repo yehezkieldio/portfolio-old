@@ -52,6 +52,15 @@ body {
     border-bottom: 0.5px solid $tertiary-background;
 }
 
+hr {
+    margin-top: 74px;
+    margin-bottom: 74px;
+
+    height: 1px;
+    background-color: $tertiary-background;
+    border: none;
+}
+
 .index {
     padding: 60px;
 
@@ -92,15 +101,6 @@ body {
                 color: $secondary-foreground;
             }
         }
-    }
-
-    hr {
-        margin-top: 74px;
-        margin-bottom: 74px;
-
-        height: 1px;
-        background-color: $tertiary-background;
-        border: none;
     }
 
     section {
@@ -154,5 +154,19 @@ body {
         .subtitle {
             @include font-style(16px, 32px, normal, normal);
         }
+    }
+}
+
+.projects,
+.technologies {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .title {
+        padding-bottom: 24px;
+        @include font-style(51px, 73px, normal, 700);
+    }
+    .subtitle {
+        @include font-style(16px, 32px, normal, normal);
     }
 }
