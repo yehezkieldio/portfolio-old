@@ -68,9 +68,3 @@
         font-weight: $font-weight;
     }
 }
-
-@mixin map-to-css-variables($map: ()) {
-    @each $key, $value in $map {
-        --#{$key}: #{$value};
-    }
-}

@@ -1,15 +1,9 @@
-@use "sass:map";
+$jetbrains-mono: "JetBrains Mono", monospace;
+$dm-sans: "DM Sans", sans-serif;
 
-@import "./mixins";
+$primary-background: #1a202c;
+$secondary-background: #171d28;
+$tertiary-background: #2e343e;
 
-$playfairdisplay: "Playfair Display", serif;
-$dmsans: "DM Sans", sans-serif;
-$jetbrains-mono: "JetBrains Mono", sans-serif;
-
-$theme-map-personal: (
-    "primary-background": #1a202c,
-    "secondary-background": #171d28,
-    "primary-foreground": #d3e4eb,
-    "secondary-foreground": #bbbbbb,
-    "tertiary-foreground": #ff5c98,
-);
+$primary-foreground: #d3e4eb;
+$secondary-foreground: #b2a6b6;

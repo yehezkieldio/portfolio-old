@@ -4,11 +4,6 @@ import Head from "next/head";
 import "../styles/index.scss";
 
 export const _app = ({ Component, pageProps }: AppProps) => {
-    if (process.browser) {
-        const currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
-
-        if (currentTheme) document.documentElement.setAttribute("data-theme", currentTheme);
-    }
     return (
         <>
             <Head>
@@ -16,7 +11,7 @@ export const _app = ({ Component, pageProps }: AppProps) => {
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <title>Yehezkiel Dio (LichKing112/Liz)</title>
+                <title>Yehezkiel Dio (Liz)</title>
                 <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
             <Component {...pageProps} />

@@ -1,15 +1,14 @@
+import React from "react";
 import Link from "next/link";
-import { Link as ReactScrollLink } from "react-scroll";
-import { Component } from "react";
 
-interface IProps {}
-
-interface IStates {
+interface NavbarStates {
     isActive: boolean;
 }
 
-export class Navbar extends Component<IProps, IStates> {
-    constructor(props: IProps) {
+interface NavbarProps {}
+
+export class Navbar extends React.Component<NavbarProps, NavbarStates> {
+    constructor(props: NavbarProps) {
         super(props);
 
         this.state = {
@@ -17,10 +16,10 @@ export class Navbar extends Component<IProps, IStates> {
         };
     }
 
-    private _handleNavigation = () => {
-        this.setState((prevState) => {
+    private __handleNavigation = () => {
+        this.setState((previousState) => {
             return {
-                isActive: !prevState.isActive,
+                isActive: !previousState.isActive,
             };
         });
     };
@@ -30,7 +29,7 @@ export class Navbar extends Component<IProps, IStates> {
             <nav className="navbar" role="navigation">
                 <div className="navbar-brand">
                     <a
-                        onClick={this._handleNavigation}
+                        onClick={this.__handleNavigation}
                         className={this.state.isActive ? "navbar-burger is-active" : "navbar-burger"}
                         aria-label="menu"
                         aria-expanded="false"
@@ -43,20 +42,17 @@ export class Navbar extends Component<IProps, IStates> {
                 </div>
                 <div className={this.state.isActive ? "navbar-menu is-active " : "navbar-menu"} id="navbarMenu">
                     <div className="navbar-end">
-                        <Link href="" passHref>
-                            <ReactScrollLink to="header" smooth={true} className="navbar-item">
-                                Home
-                            </ReactScrollLink>
+                        <Link href="/" passHref>
+                            <a className="navbar-item">Home</a>
                         </Link>
-                        <Link href="" passHref>
-                            <ReactScrollLink to="about-me" smooth={true} className="navbar-item">
-                                About
-                            </ReactScrollLink>
+                        <Link href="/about" passHref>
+                            <a className="navbar-item">About</a>
                         </Link>
-                        <Link href="" passHref>
-                            <ReactScrollLink to="projects" smooth={true} className="navbar-item">
-                                Projects
-                            </ReactScrollLink>
+                        <Link href="/projects" passHref>
+                            <a className="navbar-item">Projects</a>
+                        </Link>
+                        <Link href="/technologies" passHref>
+                            <a className="navbar-item">Technologies</a>
                         </Link>
                     </div>
                 </div>
@@ -64,5 +60,3 @@ export class Navbar extends Component<IProps, IStates> {
         );
     }
 }
-
-export default Navbar;
