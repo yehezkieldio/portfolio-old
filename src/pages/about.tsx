@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-import { MainContent } from "../components/pages/about/MainContent";
+import { AboutContent } from "../components/pages/about/AboutContent";
 
 import { Wrapper } from "../components/Wrapper";
 
@@ -8,7 +8,7 @@ export const About: NextPage = () => {
     return (
         <Wrapper>
             <div className="about">
-                <MainContent />
+                <AboutContent />
             </div>
         </Wrapper>
     );

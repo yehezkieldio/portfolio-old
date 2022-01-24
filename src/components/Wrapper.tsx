@@ -17,7 +17,7 @@ export class Wrapper extends React.Component<WrapperProps, WrapperStates> {
         return (
             <>
                 <div className="wrapper">
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <div className="container is-max-desktop">{this.props.children}</div>
                 </div>
             </>

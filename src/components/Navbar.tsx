@@ -45,15 +45,15 @@ export class Navbar extends React.Component<NavbarProps, NavbarStates> {
                         <Link href="/" passHref>
                             <a className="navbar-item">Home</a>
                         </Link>
-                        <Link href="/about" passHref>
+                        {/* <Link href="/about" passHref>
                             <a className="navbar-item">About</a>
-                        </Link>
-                        <Link href="/projects" passHref>
+                        </Link> */}
+                        {/* <Link href="/projects" passHref>
                             <a className="navbar-item">Projects</a>
-                        </Link>
-                        <Link href="/technologies" passHref>
+                        </Link> */}
+                        {/* <Link href="/technologies" passHref>
                             <a className="navbar-item">Technologies</a>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </nav>

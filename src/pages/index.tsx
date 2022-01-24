@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 
-import { HeaderIntroduction } from "../components/pages/index/HeaderIntroduction";
-import { FeaturedProjects } from "../components/pages/index/FeaturedProjects";
+import { HomeIntroduction } from "../components/pages/index/HomeIntroduction";
 
 import { Wrapper } from "../components/Wrapper";
 
@@ -9,9 +8,9 @@ export const Index: NextPage = () => {
     return (
         <Wrapper>
             <div className="index">
-                <HeaderIntroduction />
                 <hr />
-                <FeaturedProjects />
+                <HomeIntroduction />
+                <hr />
             </div>
         </Wrapper>
     );

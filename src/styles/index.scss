@@ -64,77 +64,50 @@ hr {
 .index {
     padding: 60px;
 
-    header {
-        .title {
-            padding-bottom: 24px;
-            @include font-style(51px, 73px, normal, 700);
-        }
-        .subtitle {
-            @include font-style(16px, 32px, normal, normal);
-        }
+    .home-introduction {
+        .home-introduction-content {
+            .title {
+                padding-bottom: 24px;
 
-        .socials {
-            display: flex;
+                @include font-style(51px, 73px, normal, 700);
 
-            margin-top: 44px;
-            margin-bottom: 44px;
-            font-size: 0;
-            gap: 10px;
-
-            flex-direction: row;
-            align-items: left;
-            justify-content: left;
-
-            .is-icon {
-                display: inline-block;
-                padding: 8px;
-
-                transition: transform 0.3s ease-out;
-
-                &:hover {
-                    background: $tertiary-background;
-                    border-radius: 8px;
+                @include breakpoint(extra_small_devices) {
+                    @include font-style(32px, 73px, normal, 700);
                 }
             }
-
-            svg {
-                color: $secondary-foreground;
+            .subtitle {
+                @include font-style(16px, 32px, normal, normal);
             }
         }
-    }
+        .home-socials {
+            .home-socials-link {
+                display: flex;
+                flex-direction: row;
 
-    section {
-        .title {
-            @include font-style(25px, 36px, normal, 700);
-        }
-        .subtitle {
-            @include font-style(14px, 28px, normal, normal);
-            padding-bottom: 18px;
-        }
+                margin-top: 44px;
+                margin-bottom: 44px;
 
-        .projects {
-            .project {
-                margin-top: 18px;
-                margin-bottom: 18px;
+                font-size: 0;
 
-                padding: 28px;
-                background: $secondary-background;
-                border: 0.5px solid $tertiary-background;
-                border-radius: 8px;
+                gap: 10px;
 
-                .project-media {
-                    padding-right: 80px;
+                align-items: flex-start;
+                justify-content: left;
 
-                    img {
+                .is-icon {
+                    display: inline-block;
+
+                    padding: 8px;
+
+                    transition: transform 0.3s ease-out;
+
+                    svg {
+                        color: $secondary-foreground;
+                    }
+
+                    &:hover {
+                        background: $tertiary-background;
                         border-radius: 8px;
-                    }
-                }
-                .project-information {
-                    .title {
-                        @include font-style(16px, 28px, normal, 700);
-                    }
-                    .subtitle {
-                        @include font-style(14px, 28px, normal, normal);
                     }
                 }
             }
@@ -142,15 +115,19 @@ hr {
     }
 }
 
+.page-title {
+    padding-bottom: 24px;
+    @include font-style(51px, 73px, normal, 700);
+}
+.page-subtitle {
+    @include font-style(16px, 32px, normal, normal);
+}
+
 .about {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    main {
-        .title {
-            padding-bottom: 24px;
-            @include font-style(51px, 73px, normal, 700);
-        }
+    .about-content {
         .subtitle {
             @include font-style(16px, 32px, normal, normal);
         }
