@@ -37,7 +37,7 @@ export class HomeIntroduction extends React.Component<HomeIntroductionProps, Hom
                         </li>
                         <li className="home-socials-link-item">
                             <span className="is-icon">
-                                <Link href="https://github.com/LichKing112" passHref>
+                                <Link href="https://github.com/yehezkieldio" passHref>
                                     <FaGithub size={28} />
                                 </Link>
                             </span>
