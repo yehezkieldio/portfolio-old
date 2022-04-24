@@ -24,9 +24,13 @@ html {
 body {
     margin: 0;
     padding: 0;
-    border: 1em solid $secondary-background;
+
     color: $primary-foreground;
     line-height: 1.45;
+
+    @include breakpoint(extra_large_devices) {
+        border: 1em solid $secondary-background;
+    }
 }
 
 html,
@@ -57,6 +61,14 @@ body {
 .page-main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(auto, 1200px) minmax(2rem, 1ft);
+
+    @include breakpoint(extra_small_devices) {
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
 }
 
 .navbar {
@@ -85,6 +97,24 @@ body {
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    .navbar-brand .navbar-burger {
+        color: $primary-foreground;
+    }
+
+    .navbar-menu.is-active {
+        background: transparent;
+        .navbar-end > a {
+            margin-left: 0;
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                background: transparent;
+                color: $primary-foreground;
+            }
         }
     }
 
@@ -133,6 +163,11 @@ body {
             margin-bottom: 0;
             padding-top: 4rem;
             position: relative;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 40px;
+                line-height: 23.2px;
+            }
         }
     }
 }
@@ -146,6 +181,19 @@ body {
     padding-bottom: 6rem;
     padding-right: 2rem;
     padding-right: 2rem;
+
+    @include breakpoint(extra_small_devices) {
+        padding: 0;
+        padding: 18px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    & > p {
+        font-size: 16px;
+        line-height: 23.2px;
+    }
 
     & > p,
     .subtitle,

@@ -8,6 +8,11 @@ export const Navbar = () => {
         <header className="page-header">
             <nav className="navbar is-transparent" role="navigation">
                 <div className="navbar-brand">
+                    <Link href="/" passHref>
+                        <a className="navbar-item" href="/">
+                            yehezkieldio
+                        </a>
+                    </Link>
                     <a
                         onClick={() => {
                             setIsActive(!isActive);
@@ -22,11 +27,6 @@ export const Navbar = () => {
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
-                    <Link href="/" passHref>
-                        <a className="navbar-item" href="/">
-                            yehezkieldio
-                        </a>
-                    </Link>
                 </div>
                 <div id="navbar-menu" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
                     <div className="navbar-end">
