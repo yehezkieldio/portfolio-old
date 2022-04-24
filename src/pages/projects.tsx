@@ -1,18 +1,15 @@
 import { NextPage } from "next";
-
-import { Wrapper } from "../components/Wrapper";
+import Navbar from "../components/Navbar";
+import Main from "../components/Main";
 
 export const Projects: NextPage = () => {
     return (
-        <Wrapper>
-            <div className="projects">
-                <h1 className="title">Projects</h1>
-                <p className="subtitle">
-                    Here's a small selection of some of my recent projects, commissions, and experiences.
-                </p>
-                <hr />
-            </div>
-        </Wrapper>
+        <>
+            <Navbar />
+            <Main title="projects">
+                <p className="subtitle">No available projects to showcase.</p>
+            </Main>
+        </>
     );
 };
 

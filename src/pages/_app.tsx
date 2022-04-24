@@ -11,7 +11,7 @@ export const _app = ({ Component, pageProps }: AppProps) => {
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <title>Yehezkiel Dio (Liz)</title>
+                <title>yehezkiel dio</title>
                 <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
             <Component {...pageProps} />

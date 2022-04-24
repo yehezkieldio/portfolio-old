@@ -571,13 +571,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bulma@npm:^0.9.3":
-  version: 0.9.3
-  resolution: "bulma@npm:0.9.3"
-  checksum: 98e1c2794b70c6339b41afc929bec6e22eae5b2751dc5fb0d9b7195d1c799ba4129a6fda1097e966db492f65fc4bed719da2498356c1ea6a9972f23ad3025d5c
-  languageName: node
-  linkType: hard
-
 "cacache@npm:^15.2.0":
   version: 15.3.0
   resolution: "cacache@npm:15.3.0"
@@ -2411,7 +2404,6 @@ __metadata:
     "@types/node": ^17.0.25
     "@types/react": ^18.0.5
     "@types/react-scroll": ^1.8.3
-    bulma: ^0.9.3
     eslint: ^8.13.0
     eslint-config-next: ^12.1.5
     husky: ^7.0.4

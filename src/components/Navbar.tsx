@@ -1,62 +1,55 @@
-import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 
-interface NavbarStates {
-    isActive: boolean;
-}
+export const Navbar = () => {
+    const [isActive, setIsActive] = useState(false);
 
-interface NavbarProps {}
-
-export class Navbar extends React.Component<NavbarProps, NavbarStates> {
-    constructor(props: NavbarProps) {
-        super(props);
-
-        this.state = {
-            isActive: false,
-        };
-    }
-
-    private __handleNavigation = () => {
-        this.setState((previousState) => {
-            return {
-                isActive: !previousState.isActive,
-            };
-        });
-    };
-
-    render() {
-        return (
-            <nav className="navbar" role="navigation">
+    return (
+        <header className="page-header">
+            <nav className="navbar is-transparent" role="navigation">
                 <div className="navbar-brand">
                     <a
-                        onClick={this.__handleNavigation}
-                        className={this.state.isActive ? "navbar-burger is-active" : "navbar-burger"}
+                        onClick={() => {
+                            setIsActive(!isActive);
+                        }}
+                        role="button"
+                        className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
                         aria-label="menu"
                         aria-expanded="false"
-                        data-target="navbarMenu"
+                        data-target="navbar-menu"
                     >
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
+                    <Link href="/" passHref>
+                        <a className="navbar-item" href="/">
+                            yehezkieldio
+                        </a>
+                    </Link>
                 </div>
-                <div className={this.state.isActive ? "navbar-menu is-active " : "navbar-menu"} id="navbarMenu">
+                <div id="navbar-menu" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
                     <div className="navbar-end">
-                        <Link href="/" passHref>
-                            <a className="navbar-item">Home</a>
+                        <Link href="/technologies" passHref>
+                            <a className="navbar-item" href="/technologies">
+                                technologies
+                            </a>
                         </Link>
-                        {/* <Link href="/about" passHref>
-                            <a className="navbar-item">About</a>
-                        </Link> */}
-                        {/* <Link href="/projects" passHref>
-                            <a className="navbar-item">Projects</a>
-                        </Link> */}
-                        {/* <Link href="/technologies" passHref>
-                            <a className="navbar-item">Technologies</a>
-                        </Link> */}
+                        <Link href="/projects" passHref>
+                            <a className="navbar-item" href="/projects">
+                                projects
+                            </a>
+                        </Link>
+                        <Link href="/notes" passHref>
+                            <a className="navbar-item" href="/notes">
+                                notes
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </nav>
-        );
-    }
-}
+        </header>
+    );
+};
+
+export default Navbar;
