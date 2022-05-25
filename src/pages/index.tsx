@@ -11,8 +11,8 @@ export const Index: NextPage = () => {
             <Navbar />
             <Main title="yehezkieldio">
                 <p className="subtitle">
-                    I'm Yehezkiel Dio <span className="username">(mirae)</span>, a web developer based in Indonesia. I
-                    specialize in full-stack development and interface design. Currently, I'm:
+                    I&apos;m Yehezkiel Dio <span className="username">(mirae)</span>, a web developer based in
+                    Indonesia. I specialize in full-stack development and interface design. Currently, I&apos;m:
                 </p>
                 <ul>
                     <li>IT Intern at Department of Labor and Social Balikpapan.</li>

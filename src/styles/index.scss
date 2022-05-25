@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+@import "./variables";
+@import "./mixins";
+
+::selection {
+    background-color: rgba(255, 205, 155, 0.5);
+}
+
+*,
+*::before,
+*::after {
+    border-width: 0;
+    border-style: solid;
+
+    box-sizing: border-box;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    color: $primary-foreground;
+    line-height: 1.45;
+
+    @include breakpoint(extra_large_devices) {
+        border: 1em solid $secondary-background;
+    }
+}
+
+html,
+body {
+    font-family: $be-vietnam-pro;
+    font-feature-settings: "kern";
+    background: $primary-background;
+}
+
+.title,
+.subtitle {
+    color: $primary-foreground;
+}
+
+.username {
+    font-style: italic;
+    font-weight: 200 !important;
+    color: $primary-foreground;
+}
+
+.page-header {
+    background: $secondary-background;
+    padding: 4rem 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+}
+
+.page-main {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(auto, 1200px) minmax(2rem, 1ft);
+
+    @include breakpoint(extra_small_devices) {
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+}
+
+.navbar {
+    background: transparent;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .navbar-item {
+        text-transform: lowercase;
+        color: $primary-foreground;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $primary-foreground;
+        }
+    }
+
+    .navbar-brand > a:last-of-type {
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: normal;
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .navbar-brand .navbar-burger {
+        color: $primary-foreground;
+    }
+
+    .navbar-menu.is-active {
+        background: transparent;
+        .navbar-end > a {
+            margin-left: 0;
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                background: transparent;
+                color: $primary-foreground;
+            }
+        }
+    }
+
+    .navbar-menu {
+        margin: 0.5em 0 0;
+        padding-top: 0;
+
+        .navbar-end > a {
+            text-decoration: underline;
+            font-size: 1.063rem;
+            margin-left: 2em;
+
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                color: $primary-foreground;
+            }
+        }
+    }
+}
+
+.main-container {
+    grid-column: 1/-1;
+    position: relative;
+
+    .main-header {
+        background: $secondary-background;
+        padding: 4rem 2rem 2.5rem;
+
+        & > * {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .title {
+            font-family: $space-mono;
+            font-weight: 400;
+            font-size: 90px;
+            line-height: 90px;
+            letter-spacing: -0.5px;
+            color: $accent;
+
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 4rem;
+            position: relative;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 40px;
+                line-height: 23.2px;
+            }
+        }
+    }
+}
+
+.main-content {
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    padding-right: 2rem;
+    padding-right: 2rem;
+
+    @include breakpoint(extra_small_devices) {
+        padding: 0;
+        padding: 18px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    & > p {
+        font-size: 16px;
+        line-height: 23.2px;
+    }
+
+    & > p,
+    .subtitle,
+    .title {
+        max-width: 845px;
+        margin-bottom: 0;
+    }
+
+    strong {
+        color: $primary-foreground;
+    }
+
+    hr {
+        width: 50%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    a {
+        color: $accent;
+        text-decoration: underline;
+        text-decoration-color: $accent;
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
+            color: $accent;
+            text-decoration: underline;
+            text-decoration-color: $accent;
+        }
+    }
+
+    & > ul {
+        list-style: none;
+        padding: 0;
+
+        & {
+            li {
+                position: relative;
+                margin-left: 1.75em;
+
+                &::before {
+                    content: "\2013";
+                    color: $accent;
+                    left: -1.35em;
+                    top: -2px;
+                    position: absolute;
+                }
+            }
+            li:not(:last-of-type) {
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+
+    & > * {
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 24px;
+        margin-bottom: 44px;
+
+        font-size: 0;
+
+        gap: 10px;
+
+        align-items: flex-start;
+        justify-content: left;
+
+        .is-icon {
+            display: inline-block;
+
+            padding: 8px;
+
+            transition: transform 0.3s ease-out;
+
+            svg {
+                color: $accent;
+            }
+
+            &:hover {
+                background: darken($color: $primary-background, $amount: 5);
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.technologies {
+    .nodejs,
+    .php,
+    .styles,
+    .database,
+    .system {
+        margin-top: 6em;
+        margin-bottom: 6em;
+
+        p {
+            font-family: $space-mono;
+            margin-bottom: 2em;
+        }
+    }
+
+    .box {
+        background: $secondary-background;
+        color: $primary-foreground;
+
+        span {
+            margin-left: 6px;
+        }
+    }
+
+    span,
+    svg,
+    i {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    svg,
+    i {
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+
+        display: inline-block;
+        vertical-align: middle;
+    }
+    svg *,
+    i * {
+        width: 36px;
+        height: 36px;
+    }
+}

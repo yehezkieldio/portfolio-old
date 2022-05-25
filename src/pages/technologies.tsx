@@ -7,7 +7,7 @@ export const Technologies: NextPage = () => {
         <>
             <Navbar />
             <Main title="technologies">
-                <p className="subtitle">My current tech-stack or technologies i've frequently used.</p>
+                <p className="subtitle">My current tech-stack or technologies i&apos;ve frequently used.</p>
                 <div className="technologies">
                     <div className="nodejs">
                         <p className="subtitle">node</p>
